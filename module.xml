@@ -1,0 +1,36 @@
+<module>
+	<rawname>sccp_manager</rawname>
+	<name>SCCP Manager</name>
+	<version>1.1.0</version>
+	<type>setup</type>
+	<category>SCCP Connectivity</category>
+	<publisher>Cynjut Consulting Services, LLC</publisher>
+	<description>SCCP Phone and Extention Manager</description>
+	<menuitems>
+		<sccp_devices sort="1">SCCP Phones</sccp_devices>
+		<sccp_extensions sort="2">SCCP Extensions</sccp_extensions>
+		<sccp_config sort="3">SCCP Config</sccp_config>
+		<sccp_tftp sort="4">SCCP TFTP</sccp_tftp>
+		<sccp_keyset sort="5">SCCP Keyset</sccp_keyset>
+		<sccp_devmodel sort="6">SCCP DevModel</sccp_devmodel>
+	</menuitems>
+	<changelog>
+	Changes since Version 1.0.0. 
+	Updated Phone Config to change button configuration to match SCCP method. Any button can be anything in SCCP. In addition to Line definitions, now include SpeedDials, Services, Feature, and declared Empty. Blank is assumed to be Empty to match old behavior. Allows update of all fields in real-time database.
+	Updated Line config to allow for multiple phones-per-line, modification of incoming call limits, number to dial for Voicemail (defaults to \*97).
+	All language code entries now work from approved Cisco Language Code List (so that phones will recognize language entry).
+	Added new phones to list, including Nokia and Motorola SCCP phones.
+	Added support for phone addons.
+	Added new Do Not Disturb settings to match Version 3.1 of chan-sccp-b or higher.
+	All context entries default to default (usually from-internal)context from amportal.conf.
+	Permit now accepts "Internal" instead of requiring numeric address.
+	Updated Line Config to allow for modification of all entries in real-time database.
+	Added SCCP Master Config Editor.
+	Added SCCP TFTP Config File Editor (XMLDefault AND individual phones).
+	Added SCCP Keyset Config Editor (updates sccp.conf file).
+	Address and port of server now pulled into per-device config files from sccp.conf.
+	SCCP Image Load Info now pulled into phone config, and OS79??.txt files are created for devices that require them.
+	</changelog>
+	<location></location>
+	<md5sum></md5sum>
+</module>
