@@ -11,10 +11,10 @@ if (!$db->getAll('SHOW COLUMNS FROM sccpdevmodel WHERE FIELD = "loadimage"')) {
     `vendor` varchar(40) DEFAULT '',
     `dns` int(2) DEFAULT '1',
     `buttons` int(2) DEFAULT '0',
-    `loadimage' varchar(40) DEFAULT '',
+    `loadimage` varchar(40) DEFAULT '',
     PRIMARY KEY (`model`),
     KEY `model` (`model`)
-    ) ENGINE=MyISAM DEFAULT CHARSET=latin1";
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
     
     $check = $db->query($sql);
     if(db::IsError($check)) {
@@ -23,7 +23,7 @@ if (!$db->getAll('SHOW COLUMNS FROM sccpdevmodel WHERE FIELD = "loadimage"')) {
 }
 
 if (!$db->getAll('SHOW COLUMNS FROM sccpdevmodel WHERE FIELD = "loadinformationid"')) {
-    $sql = "ALTER TABLE 'sccpdevmodel' ADD loadinformationid charchar(30);";
+    $sql = "ALTER TABLE 'sccpdevmodel' ADD loadinformationid varchar(30);";
     $check = $db->query($sql);
     if(DB::IsError($check)) {
 	die_freepbx("Can not add loadinformationid into sccpdevmodel table\n");
@@ -64,7 +64,7 @@ if (!$db->getAll('SHOW COLUMNS FROM sccpline WHERE FIELD = "id"')) {
 	`setvar` varchar(50) default NULL,
 	`name` varchar(45) NOT NULL default '',
 	PRIMARY KEY  (`name`)
-    ) ENGINE=MyISAM DEFAULT CHARSET=latin1;";
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
     $check = $db->query($sql);
     if(DB::IsError($check)) {
 	die_freepbx("Can not add sccpline table\n");
@@ -127,7 +127,7 @@ if (!$db->getAll('SHOW COLUMNS FROM sccpdevice WHERE FIELD = "type"')) {
 	`ringtone` varchar(255) DEFAULT NULL,
 	`name` varchar(15) NOT NULL default '',
 	PRIMARY KEY  (`name`)
-    ) ENGINE=MyISAM DEFAULT CHARSET=latin1;";
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
     
     $check = $db->query($sql);
     if(DB::IsError($check)) {
@@ -186,7 +186,7 @@ if (!$db->getAll('SHOW COLUMNS FROM sccpsettings WHERE FIELD = "keyword"')) {
 	PRIMARY KEY  (`keyword`,`seq`,`type`),
 	KEY `keyword` (`keyword`)
     
-    ) ENGINE=MyISAM DEFAULT CHARSET=latin1;";
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
     
     $check = $db->query($sql);
     if(DB::IsError($check)) {

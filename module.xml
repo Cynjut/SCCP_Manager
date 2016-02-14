@@ -1,7 +1,7 @@
 <module>
 	<rawname>sccp_manager</rawname>
 	<name>SCCP Manager</name>
-	<version>1.1.0</version>
+	<version>1.1.2</version>
 	<type>setup</type>
 	<category>SCCP Connectivity</category>
 	<publisher>Cynjut Consulting Services, LLC</publisher>
@@ -15,6 +15,8 @@
 		<sccp_devmodel sort="6">SCCP DevModel</sccp_devmodel>
 	</menuitems>
 	<changelog>
+     Changes since Version 1.1.
+     Fixed a couple of typos and updated the PHP code to not fail on install with Asterisk 13.<hr>
 	Changes since Version 1.0.0. 
 	Updated Phone Config to change button configuration to match SCCP method. Any button can be anything in SCCP. In addition to Line definitions, now include SpeedDials, Services, Feature, and declared Empty. Blank is assumed to be Empty to match old behavior. Allows update of all fields in real-time database.
 	Updated Line config to allow for multiple phones-per-line, modification of incoming call limits, number to dial for Voicemail (defaults to \*97).
